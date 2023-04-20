@@ -17,6 +17,9 @@
     # rm -f gemset.nix
     # bundler lock
     # bundix
+    # direnv reload
+    # rails new . --skip-bundle
+    # direnv reload
     devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = [
         pkgs.bundler
