@@ -10,6 +10,13 @@
   in {
     # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     # packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+
+    # how I set this up:
+    # nix shell 'nixpkgs#bundler' 'nixpkgs#bundix'
+    # export BUNDLE_FORCE_RUBY_PLATFORM=true
+    # rm -f gemset.nix
+    # bundler lock
+    # bundix
     devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = [
         pkgs.bundler
