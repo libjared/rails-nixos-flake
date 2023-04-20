@@ -24,6 +24,7 @@
         rubyEnv
         rubyEnv.wrappedRuby
       ];
+      BUNDLE_FORCE_RUBY_PLATFORM = "true";
     };
   };
 }
